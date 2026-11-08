@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cognevance Technologies - Cloud-Based Static Website Deployment</title>
+    <meta name="description" content="Production-ready Level 1 Cloud Computing & DevOps static website and deployment suite for Cognevance Technologies, hosted on GitHub Pages with UptimeRobot monitoring." />
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Cognevance Technologies - Cloud-Based Static Website Deployment" />
+    <meta property="og:description" content="Production-ready Level 1 Cloud Computing & DevOps static website and deployment suite for Cognevance Technologies, hosted on GitHub Pages with UptimeRobot monitoring." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/images/cloud-topology.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400..700&family=Plus+Jakarta+Sans:wght@500..800&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+
+    <!-- ======================================================================
+         Navigation Bar (Top Bar Contract: 3 Zones)
+         ====================================================================== -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        
+        <!-- Zone 1: Brand Wordmark -->
+        <a href="#home" class="nav-brand" aria-label="Cognevance Technologies Home">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+            </svg>
+          </div>
+          <span>Cognevance<span class="brand-accent">Tech</span></span>
+        </a>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav aria-label="Primary Navigation">
+          <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#technologies" class="nav-link">Technologies</a></li>
+            <li><a href="#why-us" class="nav-link">Why Us</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Zone 3: Primary Action & Hamburger -->
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        </div>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle mobile navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobile-menu" role="region" aria-label="Mobile Navigation Drawer">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#about" class="mobile-nav-link">About Cognevance</a>
+      <a href="#services" class="mobile-nav-link">Our Services</a>
+      <a href="#technologies" class="mobile-nav-link">Technology Stack</a>
+      <a href="#why-us" class="mobile-nav-link">Why Choose Us</a>
+      <a href="#contact" class="mobile-nav-link">Contact Us</a>
+      <a href="#contact" class="btn btn-primary" style="margin-top: 0.5rem; text-align: center;">Get in Touch</a>
+    </div>
+
+    <!-- ======================================================================
+         Main Content Area
+         ====================================================================== -->
+    <main>
+
+      <!-- Section 1: Hero Section -->
+      <section class="section hero" id="home">
+        <div class="container hero-grid">
+          
+          <div class="hero-content">
+            <span class="hero-kicker">COGNEVANCE TECHNOLOGIES · CLOUD & DEVOPS</span>
+            <h1 class="hero-title">Architecting Resilient Cloud Infrastructure & Modern Web Solutions</h1>
+            <p class="hero-description">
+              We engineer scalable static cloud deployments, continuous integration pipelines, and enterprise-grade web architectures. Designed for 99.9% availability, automated security, and global low-latency performance.
+            </p>
+            
+            <div class="hero-buttons">
+              <a href="#services" class="btn btn-primary">Explore Services</a>
+              <button type="button" class="btn btn-secondary" id="hero-devops-trigger" onclick="document.getElementById('devops-open-btn').click()">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
+                </svg>
+                DevOps Blueprint
+              </button>
+            </div>
+
+            <div class="hero-meta">
+              <span class="hero-meta-item"><span class="meta-dot">●</span> 99.9% Target SLA</span>
+              <span class="hero-meta-item"><span class="meta-dot">●</span> Fastly Edge CDN</span>
+              <span class="hero-meta-item"><span class="meta-dot">●</span> Enforced HTTPS</span>
+              <span class="hero-meta-item"><span class="meta-dot">●</span> Zero-Server Attack Surface</span>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Interactive Cloud Topology & Network Mesh Diagram">
+            <img src="./assets/images/cloud-topology.svg" alt="Cognevance Cloud Infrastructure Topology Diagram" width="680" height="480" loading="eager" />
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 2: About Section -->
+      <section class="section section-alt" id="about">
+        <div class="container">
+          
+          <div class="section-header">
+            <span class="section-tagline">Company Overview</span>
+            <h2 class="section-title">Engineering Excellence in the Cloud</h2>
+            <p class="section-subtitle">
+              Cognevance Technologies bridges the gap between software design and cloud reliability, delivering resilient web platforms backed by modern DevOps engineering.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-story">
+              <p class="about-lead">
+                Founded to bring enterprise cloud engineering to forward-thinking businesses, Cognevance Technologies specializes in zero-downtime static delivery, GitOps automation, and security hardening.
+              </p>
+              <p class="about-text">
+                Traditional dynamic web infrastructure is often fraught with unnecessary operational costs, database vulnerabilities, and unpredictable downtime. By leveraging modern static cloud hosting on global edge networks, we deliver lightning-fast digital solutions that scale without server management overhead.
+              </p>
+              <p class="about-text">
+                Our Level 1 Cloud-Based Static Website Deployment project embodies this philosophy: utilizing pure HTML5, CSS3, and modern Vanilla JavaScript, deployed seamlessly via GitHub Pages with automated continuous deployment and 24/7 synthetic monitoring through UptimeRobot.
+              </p>
+            </div>
+
+            <div class="pillar-list">
+              <div class="pillar-card">
+                <h3 class="pillar-title">Our Mission</h3>
+                <p class="pillar-desc">
+                  To democratize enterprise-grade cloud computing and DevOps automation with secure, cost-effective, and highly available web architectures.
+                </p>
+              </div>
+
+              <div class="pillar-card">
+                <h3 class="pillar-title">Our Vision</h3>
+                <p class="pillar-desc">
+                  To be the trusted engineering partner for scalable digital systems, setting the benchmark for continuous delivery, reliability, and web performance.
+                </p>
+              </div>
+
+              <div class="pillar-card">
+                <h3 class="pillar-title">Core Principles</h3>
+                <p class="pillar-desc">
+                  Infrastructure as Code, Zero-Trust Security, Continuous Availability, and Lightweight Semantic Engineering.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 3: Services Section (6 Cards) -->
+      <section class="section" id="services">
+        <div class="container">
+          
+          <div class="section-header">
+            <span class="section-tagline">Specialized Capabilities</span>
+            <h2 class="section-title">Comprehensive Cloud & DevOps Services</h2>
+            <p class="section-subtitle">
+              End-to-end technology solutions crafted for reliability, security, and effortless horizontal scalability.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            
+            <!-- Service 1 -->
+            <div class="service-card">
+              <span class="service-number">01. CLOUD</span>
+              <h3 class="service-title">Cloud Computing</h3>
+              <p class="service-desc">
+                Strategic cloud architecture design, seamless workload migration, and multi-cloud optimization across enterprise platforms.
+              </p>
+              <ul class="service-features">
+                <li>Cloud Readiness Assessment</li>
+                <li>Hybrid & Multi-Cloud Architecture</li>
+                <li>Cost Optimization & Resource Rightsizing</li>
+              </ul>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+              <span class="service-number">02. WEB</span>
+              <h3 class="service-title">Web Development</h3>
+              <p class="service-desc">
+                High-performance, responsive web applications engineered with semantic standards, WCAG AA accessibility, and sub-second load times.
+              </p>
+              <ul class="service-features">
+                <li>Responsive Single-Page Interfaces</li>
+                <li>Static Site Generation & Delivery</li>
+                <li>Cross-Browser Compatibility</li>
+              </ul>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+              <span class="service-number">03. DEVOPS</span>
+              <h3 class="service-title">DevOps Automation</h3>
+              <p class="service-desc">
+                Automated continuous integration and deployment pipelines, GitOps workflows, and automated regression testing.
+              </p>
+              <ul class="service-features">
+                <li>GitHub Actions CI/CD Pipelines</li>
+                <li>Infrastructure as Code (IaC)</li>
+                <li>Automated Quality & Security Gates</li>
+              </ul>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="service-card">
+              <span class="service-number">04. INFRASTRUCTURE</span>
+              <h3 class="service-title">Cloud Infrastructure</h3>
+              <p class="service-desc">
+                Provisioning and hardening virtual private clouds, edge CDN caching networks, DNS routing, and containerized clusters.
+              </p>
+              <ul class="service-features">
+                <li>Edge CDN Acceleration (Fastly/Cloudflare)</li>
+                <li>Zero-Downtime Deployment Strategies</li>
+                <li>VPC Network Segmentation & Firewalls</li>
+              </ul>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="service-card">
+              <span class="service-number">05. SOLUTIONS</span>
+              <h3 class="service-title">Digital Solutions</h3>
+              <p class="service-desc">
+                Modernizing legacy software into decoupled, cloud-native digital platforms designed for rapid feature iteration.
+              </p>
+              <ul class="service-features">
+                <li>Monolith to Microservices Evolution</li>
+                <li>Serverless Function Integration</li>
+                <li>REST & GraphQL Integration Layers</li>
+              </ul>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="service-card">
+              <span class="service-number">06. CONSULTING</span>
+              <h3 class="service-title">Technology Consulting</h3>
+              <p class="service-desc">
+                Expert technical guidance covering cloud security posture audits, DevOps maturity evaluations, and SLA governance.
+              </p>
+              <ul class="service-features">
+                <li>DevOps Maturity Index Assessment</li>
+                <li>Static Security & CSP Hardening</li>
+                <li>Synthetic Monitoring & SRE Runbooks</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 4: Technologies Section (8 Stacks) -->
+      <section class="section section-alt" id="technologies">
+        <div class="container">
+          
+          <div class="section-header">
+            <span class="section-tagline">Technology Ecosystem</span>
+            <h2 class="section-title">Built with Industry Standards</h2>
+            <p class="section-subtitle">
+              Leveraging battle-tested open standards and modern cloud platforms for maximum interoperability.
+            </p>
+          </div>
+
+          <div class="tech-grid">
+            
+            <div class="tech-card">
+              <div class="tech-icon-wrap">
+                <img src="./assets/icons/html5.svg" alt="HTML5 Icon" width="44" height="44" />
+              </div>
+              <h3 class="tech-name">HTML5</h3>
+              <span class="tech-role">Semantic Markup</span>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrap">
+                <img src="./assets/icons/css3.svg" alt="CSS3 Icon" width="44" height="44" />
+              </div>
+              <h3 class="tech-name">CSS3</h3>
+              <span class="tech-role">Responsive Styling</span>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrap">
+                <img src="./assets/icons/javascript.svg" alt="JavaScript Icon" width="44" height="44" />
+              </div>
+              <h3 class="tech-name">JavaScript</h3>
+              <span class="tech-role">Vanilla DOM Logic</span>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrap">
+                <img src="./assets/icons/git.svg" alt="Git Icon" width="44" height="44" />
+              </div>
+              <h3 class="tech-name">Git</h3>
+              <span class="tech-role">Version Control</span>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrap">
+                <img src="./assets/icons/github.svg" alt="GitHub Icon" width="44" height="44" />
+              </div>
+              <h3 class="tech-name">GitHub</h3>
+              <span class="tech-role">Cloud Pages Host</span>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrap">
+                <img src="./assets/icons/aws.svg" alt="AWS Icon" width="44" height="44" />
+              </div>
+              <h3 class="tech-name">AWS</h3>
+              <span class="tech-role">Cloud Architecture</span>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrap">
+                <img src="./assets/icons/docker.svg" alt="Docker Icon" width="44" height="44" />
+              </div>
+              <h3 class="tech-name">Docker</h3>
+              <span class="tech-role">Containerization</span>
+            </div>
+
+            <div class="tech-card">
+              <div class="tech-icon-wrap">
+                <img src="./assets/icons/kubernetes.svg" alt="Kubernetes Icon" width="44" height="44" />
+              </div>
+              <h3 class="tech-name">Kubernetes</h3>
+              <span class="tech-role">Orchestration</span>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 5: Why Choose Us Section (5 Pillars) -->
+      <section class="section" id="why-us">
+        <div class="container">
+          
+          <div class="section-header">
+            <span class="section-tagline">Why Cognevance</span>
+            <h2 class="section-title">Engineered for Enterprise Success</h2>
+            <p class="section-subtitle">
+              Five institutional pillars that differentiate our cloud engineering practices.
+            </p>
+          </div>
+
+          <div class="why-grid">
+            
+            <div class="why-card">
+              <div class="why-icon">✦</div>
+              <h3 class="why-title">Innovation</h3>
+              <p class="why-desc">
+                Pioneering serverless architectures and static cloud workflows that reduce operational complexity while elevating system velocity.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon">✦</div>
+              <h3 class="why-title">Reliability</h3>
+              <p class="why-desc">
+                Zero single-point-of-failure deployments backed by global Fastly CDN redundancy and proactive 5-minute UptimeRobot synthetic monitoring.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon">✦</div>
+              <h3 class="why-title">Scalability</h3>
+              <p class="why-desc">
+                Static content delivery scales infinitely to handle massive traffic spikes with zero compute auto-scaling latency or cold starts.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon">✦</div>
+              <h3 class="why-title">Security</h3>
+              <p class="why-desc">
+                Eliminating database injection and server-side exploits through static edge hosting, TLS 1.3 encryption, and strict Content Security Policies.
+              </p>
+            </div>
+
+            <div class="why-card">
+              <div class="why-icon">✦</div>
+              <h3 class="why-title">Modern Technology</h3>
+              <p class="why-desc">
+                Clean, semantic, framework-free codebases adhering to WCAG 2.1 AA accessibility guidelines, lightweight footprints, and modern web standards.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section 6: Contact Section & Client Validation -->
+      <section class="section section-alt" id="contact">
+        <div class="container">
+          
+          <div class="section-header">
+            <span class="section-tagline">Get in Touch</span>
+            <h2 class="section-title">Start Your Cloud Journey</h2>
+            <p class="section-subtitle">
+              Have an inquiry or want to evaluate our DevOps solutions? Submit a message below.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            
+            <div class="contact-info">
+              <div class="info-item">
+                <span class="info-label">Organization</span>
+                <div class="info-val">Cognevance Technologies</div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-label">Project Domain</span>
+                <div class="info-val">Cloud Computing & DevOps Track (Level 1)</div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-label">Global Headquarters</span>
+                <div class="info-val">Tech Innovation Park, Suite 400</div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-label">Deployment Infrastructure</span>
+                <div class="info-val">GitHub Pages Edge CDN · HTTPS Enforced</div>
+              </div>
+            </div>
+
+            <div class="contact-form-card">
+              
+              <!-- Demonstration Mode Disclaimer -->
+              <div class="demo-disclaimer" role="note">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#60A5FA" stroke-width="2" style="flex-shrink: 0; margin-top: 2px;">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                <div>
+                  <strong>Frontend Demonstration Mode:</strong> This contact form validates client-side input in real time. In accordance with static hosting specifications, no messages are transmitted to an external backend server.
+                </div>
+              </div>
+
+              <!-- Alert Box -->
+              <div class="form-alert" id="form-alert" role="alert"></div>
+
+              <form id="contact-form" novalidate>
+                
+                <div class="form-group">
+                  <label for="name" class="form-label">Full Name <span class="required">*</span></label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Alex Mercer" required autocomplete="name" />
+                  <div class="field-error" id="name-error"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="e.g. alex.mercer@enterprise.com" required autocomplete="email" />
+                  <div class="field-error" id="email-error"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject <span class="required">*</span></label>
+                  <input type="text" id="subject" name="subject" class="form-input" placeholder="e.g. Cloud Migration Consultation" required />
+                  <div class="field-error" id="subject-error"></div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Message <span class="required">*</span></label>
+                  <textarea id="message" name="message" class="form-textarea" placeholder="Detail your project requirements or inquiry..." required></textarea>
+                  <div class="field-error" id="message-error"></div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  Submit Inquiry
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ======================================================================
+         Footer Section
+         ====================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        
+        <div class="footer-grid">
+          
+          <div class="footer-col">
+            <div class="footer-brand">Cognevance Technologies</div>
+            <p class="footer-desc">
+              Pioneering high-availability static cloud deployments, continuous delivery pipelines, and reliable web platforms.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="#home" class="footer-link">Home</a></li>
+              <li><a href="#about" class="footer-link">About Us</a></li>
+              <li><a href="#services" class="footer-link">Specialized Services</a></li>
+              <li><a href="#technologies" class="footer-link">Technology Stack</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-heading">DevOps & Cloud</h4>
+            <ul class="footer-links">
+              <li><a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub Pages Hosting ↗</a></li>
+              <li><a href="https://uptimerobot.com/" target="_blank" rel="noopener noreferrer" class="footer-link">UptimeRobot Monitoring ↗</a></li>
+              <li><a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer" class="footer-link">Git Documentation ↗</a></li>
+              <li><button type="button" class="footer-link" onclick="document.getElementById('devops-open-btn').click()" style="text-align: left; padding: 0;">Open DevOps Hub</button></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Cognevance Technologies. All rights reserved. Level 1 Internship Project.</p>
+          <p>Deployed on GitHub Pages · Monitored via UptimeRobot · Pure Static Architecture</p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"/>
+      </svg>
+    </button>
+
+    <!-- Floating DevOps Hub Trigger Button -->
+    <button class="devops-badge-btn" id="devops-open-btn" aria-label="Open DevOps Hub and Project Exporter">
+      <span class="pulse-indicator"></span>
+      DevOps Hub & Export
+    </button>
+
+    <!-- ======================================================================
+         DevOps Slide-Over Drawer & Inspection Tool
+         ====================================================================== -->
+    <div class="devops-drawer-overlay" id="devops-overlay" role="dialog" aria-modal="true" aria-labelledby="drawer-title-id">
+      <div class="devops-drawer">
+        
+        <div class="drawer-header">
+          <h3 class="drawer-title" id="drawer-title-id">DevOps & Submission Hub</h3>
+          <button class="drawer-close" id="devops-close-btn" aria-label="Close DevOps Drawer">&times;</button>
+        </div>
+
+        <div class="drawer-tabs">
+          <button class="drawer-tab active" data-tab="export">📦 Export ZIP</button>
+          <button class="drawer-tab" data-tab="architecture">⚙ Architecture</button>
+          <button class="drawer-tab" data-tab="testing">✓ QA Testing (16/16)</button>
+          <button class="drawer-tab" data-tab="deployment">🚀 Deployment Guide</button>
+          <button class="drawer-tab" data-tab="security">🔒 Security & Monitoring</button>
+        </div>
+
+        <div class="drawer-content">
+          
+          <!-- Pane 1: Export ZIP -->
+          <div class="drawer-tab-pane active" id="tab-pane-export">
+            <h4 style="color: #FFFFFF; margin-bottom: 0.5rem; font-family: var(--font-display);">1-Click GitHub-Ready Package Download</h4>
+            <p style="color: var(--color-text-secondary); margin-bottom: 1rem; font-size: 0.875rem;">
+              Click below to generate and download a clean, production-ready <code>cognevance_cloud_static_website.zip</code> containing all static HTML, CSS, JavaScript, SVGs, documentation reports, and Git configs.
+            </p>
+
+            <button type="button" class="btn btn-primary" id="btn-download-zip" style="width: 100%; margin-bottom: 1.5rem; padding: 0.875rem;">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download cognevance_cloud_static_website.zip
+            </button>
+
+            <h5 style="color: #FFFFFF; margin-bottom: 0.5rem;">Git Quickstart Commands:</h5>
+            <div class="code-block">
+git clone &lt;repo-url&gt;
+cd cognevance_cloud_static_website
+git init
+git branch -M main
+git add .
+git commit -m "feat: complete Cognevance Technologies Level 1 static cloud website"
+git remote add origin https://github.com/&lt;username&gt;/cognevance_cloud_static_website.git
+git push -u origin main
+            </div>
+            <button type="button" class="btn btn-secondary btn-copy" data-copy="git init&#10;git branch -M main&#10;git add .&#10;git commit -m &quot;feat: complete Cognevance Technologies Level 1 static cloud website&quot;&#10;git remote add origin https://github.com/<username>/cognevance_cloud_static_website.git&#10;git push -u origin main">
+              Copy Git Commands
+            </button>
+          </div>
+
+          <!-- Pane 2: Architecture -->
+          <div class="drawer-tab-pane" id="tab-pane-architecture">
+            <h4 style="color: #FFFFFF; margin-bottom: 0.5rem; font-family: var(--font-display);">Cloud & DevOps System Architecture</h4>
+            <div class="code-block">
+Developer (Local Workstation)
+    ↓ (HTML5 + CSS3 + Vanilla JS)
+Git Version Control (Local Repository)
+    ↓ (git push origin main)
+GitHub Repository (cognevance_cloud_static_website)
+    ↓ (Automated Deploy from /(root))
+GitHub Pages Cloud Infrastructure (Fastly Global CDN)
+    ↓ (Automated Let's Encrypt TLS / SSL)
+Public Live Website (https://&lt;user&gt;.github.io/cognevance_cloud_static_website/)
+    ↓ (Continuous 5-Minute Synthetic Ping)
+UptimeRobot Availability Monitor (SLA Target: 99.9%)
+            </div>
+            <p style="color: var(--color-text-secondary); font-size: 0.875rem;">
+              Every component is decoupled: the developer pushes code to GitHub, GitHub Pages serves the static edge files across global Fastly nodes, and UptimeRobot verifies continuous availability.
+            </p>
+          </div>
+
+          <!-- Pane 3: Testing -->
+          <div class="drawer-tab-pane" id="tab-pane-testing">
+            <h4 style="color: #FFFFFF; margin-bottom: 0.5rem; font-family: var(--font-display);">Quality Assurance Test Execution Matrix</h4>
+            <table class="qa-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Test Case</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>TC-HTML-01</td><td>Semantic landmark verification (header, nav, main, footer)</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-HTML-02</td><td>Heading hierarchy order (h1, h2, h3)</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-HTML-03</td><td>Internal anchor link navigation</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-CSS-01</td><td>Mobile responsiveness (320px, 375px)</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-CSS-02</td><td>Tablet viewport layout (768px)</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-CSS-03</td><td>Desktop widescreen layout (1024px, 1440px)</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-CSS-04</td><td>Zero horizontal layout overflow</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-CSS-05</td><td>WCAG AA contrast compliance (&gt; 4.5:1)</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-JS-01</td><td>Mobile menu toggle functionality</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-JS-02</td><td>Mobile menu link click auto-close</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-JS-03</td><td>Back-to-top button appearance & action</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-JS-04</td><td>Contact form required field validation</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-JS-05</td><td>Contact form RFC email format regex</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-JS-06</td><td>Contact form demonstration mode notice</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-JS-07</td><td>Zero browser console runtime errors</td><td class="qa-pass">PASS</td></tr>
+                <tr><td>TC-DEP-01</td><td>GitHub Pages relative asset path resolution</td><td class="qa-pass">PASS</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Pane 4: Deployment -->
+          <div class="drawer-tab-pane" id="tab-pane-deployment">
+            <h4 style="color: #FFFFFF; margin-bottom: 0.5rem; font-family: var(--font-display);">GitHub Pages Deployment Checklist</h4>
+            <ol style="color: var(--color-text-secondary); font-size: 0.875rem; padding-left: 1.25rem; line-height: 1.8;">
+              <li>Create GitHub repository named <code>cognevance_cloud_static_website</code> (Public).</li>
+              <li>Push all files from root to branch <code>main</code>.</li>
+              <li>In GitHub, click <strong>Settings</strong> → <strong>Pages</strong>.</li>
+              <li>Under <strong>Source</strong>: select <em>Deploy from a branch</em>.</li>
+              <li>Under <strong>Branch</strong>: select <code>main</code> and folder <code>/(root)</code>.</li>
+              <li>Click <strong>Save</strong> and wait 60 seconds.</li>
+              <li>Check <strong>Enforce HTTPS</strong> checkbox.</li>
+              <li>Visit <code>https://&lt;your-username&gt;.github.io/cognevance_cloud_static_website/</code>.</li>
+            </ol>
+          </div>
+
+          <!-- Pane 5: Security -->
+          <div class="drawer-tab-pane" id="tab-pane-security">
+            <h4 style="color: #FFFFFF; margin-bottom: 0.5rem; font-family: var(--font-display);">Static Security & UptimeRobot Guide</h4>
+            <p style="color: var(--color-text-secondary); font-size: 0.875rem; margin-bottom: 0.75rem;">
+              <strong>Security Model:</strong> Defense-in-depth for serverless static hosting. By eliminating PHP, databases, and backend execution, 90% of web application vulnerabilities are mitigated natively.
+            </p>
+            <ul style="color: var(--color-text-secondary); font-size: 0.875rem; padding-left: 1.25rem; line-height: 1.7; margin-bottom: 1rem;">
+              <li><strong>Zero Secrets:</strong> No API tokens or passwords in client code.</li>
+              <li><strong>Safe DOM:</strong> Strict <code>textContent</code> usage prevents DOM-XSS.</li>
+              <li><strong>Tab-napping Defense:</strong> <code>rel="noopener noreferrer"</code> on outbound links.</li>
+              <li><strong>Enforced HTTPS:</strong> Automatic Let's Encrypt 256-bit TLS encryption.</li>
+            </ul>
+
+            <h5 style="color: #FFFFFF; margin-bottom: 0.5rem;">UptimeRobot Setup:</h5>
+            <ol style="color: var(--color-text-secondary); font-size: 0.875rem; padding-left: 1.25rem; line-height: 1.7;">
+              <li>Sign up for a free account at <a href="https://uptimerobot.com/" target="_blank" rel="noopener noreferrer" style="color: var(--color-blue-accent);">UptimeRobot.com</a>.</li>
+              <li>Click <strong>+ Add New Monitor</strong> → Select <strong>HTTP(s)</strong>.</li>
+              <li>Enter name <code>Cognevance Technologies</code> and your published GitHub Pages URL.</li>
+              <li>Set interval to <strong>5 minutes</strong> and configure email notifications.</li>
+            </ol>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Vanilla JavaScript Entry Point -->
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>

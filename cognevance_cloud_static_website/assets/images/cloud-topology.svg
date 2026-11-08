@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 480" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="cloudBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="emeraldGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.95"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background decorative grid -->
+  <g opacity="0.12" stroke="#60A5FA" stroke-width="1" stroke-dasharray="3,3">
+    <line x1="40" y1="40" x2="640" y2="40"/>
+    <line x1="40" y1="120" x2="640" y2="120"/>
+    <line x1="40" y1="200" x2="640" y2="200"/>
+    <line x1="40" y1="280" x2="640" y2="280"/>
+    <line x1="40" y1="360" x2="640" y2="360"/>
+    <line x1="40" y1="440" x2="640" y2="440"/>
+    <line x1="100" y1="20" x2="100" y2="460"/>
+    <line x1="220" y1="20" x2="220" y2="460"/>
+    <line x1="340" y1="20" x2="340" y2="460"/>
+    <line x1="460" y1="20" x2="460" y2="460"/>
+    <line x1="580" y1="20" x2="580" y2="460"/>
+  </g>
+
+  <!-- Central Cloud Virtual Private Network Boundary -->
+  <rect x="70" y="50" width="540" height="380" rx="20" fill="url(#cloudBg)" stroke="#334155" stroke-width="1.5"/>
+  <rect x="74" y="54" width="532" height="372" rx="16" fill="none" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Network Subnet Labels -->
+  <text x="96" y="84" fill="#94A3B8" font-family="Plus Jakarta Sans, sans-serif" font-size="12" font-weight="600" letter-spacing="1">VPC REGION · us-east-edge</text>
+  <circle cx="566" cy="80" r="5" fill="#10B981" filter="url(#softGlow)"/>
+  <text x="516" y="84" fill="#10B981" font-family="JetBrains Mono, monospace" font-size="11" font-weight="500">LIVE SLA</text>
+
+  <!-- Network Connection Vectors -->
+  <path d="M190 190 L 300 190 L 300 140 L 410 140" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-dasharray="4,4"/>
+  <path d="M300 190 L 300 240 L 410 240" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+  <path d="M300 190 L 300 340 L 410 340" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-dasharray="4,4"/>
+  <path d="M510 140 L 550 140" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+  <path d="M510 240 L 550 240" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+  <path d="M510 340 L 550 340" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Node 1: Global Edge CDN / DNS -->
+  <g transform="translate(100, 150)">
+    <rect width="100" height="80" rx="10" fill="url(#cardGrad)" stroke="#3B82F6" stroke-width="1.5"/>
+    <circle cx="28" cy="28" r="14" fill="#1E3A8A"/>
+    <path d="M22 28h12M28 22v12M24 25l8 6M32 25l-8 6" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="20" y="56" fill="#F8FAFC" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="700">Edge Gateway</text>
+    <text x="20" y="68" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="9">HTTPS / TLS</text>
+  </g>
+
+  <!-- Node 2: Application Load Balancer -->
+  <g transform="translate(240, 150)">
+    <rect width="110" height="80" rx="10" fill="url(#cardGrad)" stroke="#60A5FA" stroke-width="1.5"/>
+    <circle cx="30" cy="28" r="14" fill="#1E293B"/>
+    <path d="M24 28h12M30 22l6 6-6 6" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="20" y="56" fill="#F8FAFC" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="700">Load Balancer</text>
+    <text x="20" y="68" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="9">Traffic Router</text>
+  </g>
+
+  <!-- Node 3: Static Asset CDN Cache (GitHub Pages) -->
+  <g transform="translate(400, 100)">
+    <rect width="120" height="74" rx="10" fill="url(#cardGrad)" stroke="#38BDF8" stroke-width="1.5"/>
+    <circle cx="26" cy="26" r="12" fill="#0C4A6E"/>
+    <path d="M22 28l4-4 4 4M26 24v8" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="18" y="52" fill="#F8FAFC" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="700">Static Fastly CDN</text>
+    <text x="18" y="64" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="9">GitHub Pages Host</text>
+  </g>
+
+  <!-- Node 4: Continuous Deployment Pod -->
+  <g transform="translate(400, 200)">
+    <rect width="120" height="74" rx="10" fill="url(#cardGrad)" stroke="#10B981" stroke-width="1.5"/>
+    <circle cx="26" cy="26" r="12" fill="#064E3B"/>
+    <path d="M20 26l4 4 8-8" stroke="#34D399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="18" y="52" fill="#F8FAFC" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="700">DevOps CI Pipeline</text>
+    <text x="18" y="64" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="9">Git Push & Deploy</text>
+  </g>
+
+  <!-- Node 5: Uptime & Security Monitor -->
+  <g transform="translate(400, 300)">
+    <rect width="120" height="74" rx="10" fill="url(#cardGrad)" stroke="#818CF8" stroke-width="1.5"/>
+    <circle cx="26" cy="26" r="12" fill="#312E81"/>
+    <path d="M20 28h3l3-6 4 12 3-6h3" stroke="#A5B4FC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="18" y="52" fill="#F8FAFC" font-family="Plus Jakarta Sans, sans-serif" font-size="11" font-weight="700">UptimeRobot Probe</text>
+    <text x="18" y="64" fill="#94A3B8" font-family="JetBrains Mono, monospace" font-size="9">5-min HTTP Poll</text>
+  </g>
+
+  <!-- Floating Status Badges -->
+  <g transform="translate(540, 126)">
+    <rect width="40" height="20" rx="4" fill="#065F46"/>
+    <text x="10" y="14" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">200</text>
+  </g>
+  <g transform="translate(540, 226)">
+    <rect width="40" height="20" rx="4" fill="#065F46"/>
+    <text x="8" y="14" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">PASS</text>
+  </g>
+  <g transform="translate(540, 326)">
+    <rect width="40" height="20" rx="4" fill="#065F46"/>
+    <text x="6" y="14" fill="#34D399" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">99.9%</text>
+  </g>
+
+  <!-- Bottom Terminal Status Bar -->
+  <rect x="96" y="394" width="488" height="26" rx="6" fill="#020617" stroke="#1E293B"/>
+  <circle cx="112" cy="407" r="3" fill="#EF4444"/>
+  <circle cx="122" cy="407" r="3" fill="#F59E0B"/>
+  <circle cx="132" cy="407" r="3" fill="#10B981"/>
+  <text x="150" y="411" fill="#64748B" font-family="JetBrains Mono, monospace" font-size="10">git commit -m "Level 1 static deployment verified" && git push origin main</text>
+</svg>

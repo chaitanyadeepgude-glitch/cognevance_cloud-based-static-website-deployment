@@ -1,0 +1,6 @@
+{
+  "name": "Cognevance Technologies - Cloud Static Website",
+  "description": "Production-ready Level 1 Cloud Computing & DevOps static website and deployment suite for Cognevance Technologies, hosted on GitHub Pages with UptimeRobot monitoring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
